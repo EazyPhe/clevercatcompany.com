@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  intro: string;
+}
+
+const { title, intro } = Astro.props;
+---
+
+<section class="page-hero shell">
+  <div>
+    <h1>{title}</h1>
+    <p>{intro}</p>
+  </div>
+  <svg class="page-hero__line" viewBox="0 0 480 240" fill="none" aria-hidden="true">
+    <path d="M2 182C104 182 111 54 214 54s101 129 186 129c32 0 56-17 78-45" stroke="currentColor" stroke-width="2" />
+    <circle cx="214" cy="54" r="6" fill="currentColor" />
+    <circle cx="400" cy="183" r="6" fill="currentColor" />
+  </svg>
+</section>

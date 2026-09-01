@@ -1,0 +1,33 @@
+---
+import PageHero from '../components/PageHero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy"
+  description="Privacy placeholder for Clever Cat Company."
+>
+  <PageHero
+    title="Privacy"
+    intro="A short, honest placeholder to be completed before this website collects personal data."
+  />
+
+  <section class="legal-copy">
+    <div class="shell legal-copy__inner">
+      <h2>Privacy notice placeholder</h2>
+      <p>
+        This initial static site does not include a contact-form endpoint, analytics integration, or customer account
+        system. It should not be treated as a complete privacy notice.
+      </p>
+      <p>
+        Before the site collects messages, analytics data, or any other personal information, Clever Cat Company must
+        publish an updated privacy notice that explains what is collected, why it is collected, how long it is kept,
+        and how visitors can make privacy requests.
+      </p>
+      <p>
+        The owner should review and replace this placeholder with appropriate legal language for the actual services
+        and tools in use before launch.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

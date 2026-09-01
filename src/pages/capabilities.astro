@@ -1,0 +1,36 @@
+---
+import ContactCta from '../components/ContactCta.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Capabilities"
+  description="Explore the working capability areas of Clever Cat Company: digital, visual, engineering, and creative work."
+>
+  <PageHero
+    title="Capabilities"
+    intro="A working set of connected capabilities, ready to adapt to the shape of a real problem."
+  />
+
+  <section class="capability-detail">
+    <div class="shell">
+      <ol>
+        {site.capabilities.map((capability) => (
+          <li>
+            <span class="capability-detail__index">{capability.index}</span>
+            <article>
+              <h2>{capability.title}</h2>
+              <p>{capability.description}</p>
+              <ul>
+                {capability.details.map((detail) => <li>{detail}</li>)}
+              </ul>
+            </article>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+  <ContactCta />
+</BaseLayout>

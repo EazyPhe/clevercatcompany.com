@@ -1,0 +1,41 @@
+---
+import ArrowIcon from '../components/ArrowIcon.astro';
+import PageHero from '../components/PageHero.astro';
+import { contactEmailHref, site } from '../data/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Start a conversation with Clever Cat Company."
+>
+  <PageHero
+    title="Contact"
+    intro="Have an idea, an early brief, or a practical problem to talk through? Start with a straightforward note."
+  />
+
+  <section class="contact-page" id="email">
+    <div class="shell contact-page__grid">
+      <div>
+        <h2>Start with a note.</h2>
+        <p>
+          This static first version uses an email link rather than a form, so it never implies that a message has
+          been sent somewhere it has not.
+        </p>
+      </div>
+      <div class="contact-page__action">
+        <a class="button button--primary" href={contactEmailHref}>
+          <span>Email the studio</span>
+          <ArrowIcon class="button__icon" />
+        </a>
+        <a class="email-link" href={contactEmailHref}>{site.contact.email}</a>
+        {site.contact.emailIsPlaceholder && (
+          <p class="contact-page__note">
+            This address is an editable build placeholder and must be replaced with a monitored public inbox before
+            launch.
+          </p>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

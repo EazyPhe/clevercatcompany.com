@@ -1,0 +1,24 @@
+---
+import ArrowIcon from './ArrowIcon.astro';
+---
+
+<section class="hero shell">
+  <div class="hero__copy">
+    <h1>Clever solutions.<br />Real results.</h1>
+    <p>We turn ideas into practical digital, design, engineering, and creative outcomes.</p>
+    <div class="hero__actions">
+      <a class="button button--primary" href="/contact">
+        <span>Start a conversation</span>
+        <ArrowIcon class="button__icon" />
+      </a>
+      <a class="text-link" href="/capabilities">
+        <span>Explore capabilities</span>
+        <ArrowIcon class="text-link__icon" />
+      </a>
+    </div>
+  </div>
+  <div class="hero__media" aria-hidden="true">
+    <div class="hero__halo"></div>
+    <img src="/images/hero-sculpture.png" alt="" width="1536" height="1024" fetchpriority="high" />
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+import ContactCta from '../components/ContactCta.astro';
+import PageHero from '../components/PageHero.astro';
+import ProcessRail from '../components/ProcessRail.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="Learn about the working approach behind Clever Cat Company."
+>
+  <PageHero
+    title="About"
+    intro="A broad creative and technical company built around useful outcomes, clear thinking, and a willingness to make the work tangible."
+  />
+
+  <section class="about-story">
+    <div class="shell about-story__grid">
+      <div class="about-story__lead">
+        <p>
+          Some ideas need a website. Some need a product concept, a visual system, a prototype, or a better way to
+          explain what is already there. Clever Cat Company exists to work across those boundaries when that is the
+          most practical route forward.
+        </p>
+      </div>
+      <div class="about-story__body">
+        <p>
+          The service catalog is intentionally still taking shape. Rather than promise a fixed list of outcomes,
+          this first site centers the areas where digital craft, visual design, engineering thinking, and creative
+          production can reinforce one another.
+        </p>
+        <p>
+          The goal is simple: understand what matters, shape a clear direction, make the right thing, and improve
+          the details that make it useful.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <ProcessRail />
+  <ContactCta />
+</BaseLayout>

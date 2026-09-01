@@ -1,0 +1,21 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="process-section" id="process">
+  <div class="shell">
+    <div class="section-heading">
+      <h2>Four simple steps. Clear throughout.</h2>
+      <p>A straightforward way to get from an early idea to useful, well-considered work.</p>
+    </div>
+    <ol class="process-rail">
+      {site.process.map((step) => (
+        <li>
+          <span class="process-rail__number">{step.index}</span>
+          <h3>{step.title}</h3>
+          <p>{step.description}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+import { site } from '../data/site';
+import BrandMark from './BrandMark.astro';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a class="brand" href="/" aria-label="Clever Cat Company home">
+      <BrandMark />
+      <span class="brand__name">Clever Cat <span>Company</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {site.navigation.map((item) => (
+        <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>
+      ))}
+    </nav>
+
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation menu">
+        <span class="mobile-menu__icon" aria-hidden="true"><i></i><i></i></span>
+        <span>Menu</span>
+      </summary>
+      <nav aria-label="Mobile navigation">
+        {site.navigation.map((item) => (
+          <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>
+        ))}
+        <a class="mobile-menu__cta" href="/contact">Start a conversation</a>
+      </nav>
+    </details>
+  </div>
+</header>

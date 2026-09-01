@@ -1,0 +1,16 @@
+---
+import PageHero from '../components/PageHero.astro';
+import WorkGrid from '../components/WorkGrid.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Selected work"
+  description="A deliberately honest space for future Clever Cat Company project stories."
+>
+  <PageHero
+    title="Selected work"
+    intro="This is a home for real project stories—not a substitute for them. Case studies will be added as their facts, assets, and permissions are ready."
+  />
+  <WorkGrid compact />
+</BaseLayout>

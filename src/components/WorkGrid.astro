@@ -1,0 +1,31 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<section class:list={['work-section', { 'work-section--compact': compact }]} id={compact ? undefined : 'work'}>
+  <div class="shell">
+    <div class="section-heading section-heading--split">
+      <div>
+        <h2>Selected work</h2>
+      </div>
+      <p>Real project stories will be added as they are ready to share.</p>
+    </div>
+    <div class="work-grid">
+      {site.workSlots.map((slot) => (
+        <article class="work-slot">
+          <img src={slot.image} alt={slot.alt} width="1536" height="1024" loading="lazy" />
+          <div class="work-slot__copy">
+            <h3>{slot.title}</h3>
+            <p>{slot.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

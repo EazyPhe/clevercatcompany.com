@@ -1,0 +1,22 @@
+{
+  "name": "clevercatcompany-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The static Clever Cat Company website.",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.5.2",
+    "astro": "^5.16.4",
+    "typescript": "^5.8.3"
+  }
+}

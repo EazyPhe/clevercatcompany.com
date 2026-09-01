@@ -1,0 +1,26 @@
+---
+import { contactEmailHref, site } from '../data/site';
+import BrandMark from './BrandMark.astro';
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner shell">
+    <div class="footer-brand">
+      <a class="brand" href="/" aria-label="Clever Cat Company home">
+        <BrandMark />
+        <span class="brand__name">Clever Cat <span>Company</span></span>
+      </a>
+      <p>{site.domain}</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      {site.footerNavigation.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <div class="footer-contact">
+      <a href={contactEmailHref}>{site.contact.email}</a>
+      {site.contact.emailIsPlaceholder && <p>Public contact details are being confirmed before launch.</p>}
+      <p>Social links will be added when they are approved.</p>
+    </div>
+  </div>
+</footer>

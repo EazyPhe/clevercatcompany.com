@@ -1,0 +1,24 @@
+---
+import { contactEmailHref, site } from '../data/site';
+import ArrowIcon from './ArrowIcon.astro';
+---
+
+<section class="contact-cta">
+  <div class="shell contact-cta__inner">
+    <div>
+      <h2>Let’s make something useful.</h2>
+      <p>Have an idea, a problem, or an early direction to talk through? Start with a conversation.</p>
+      <div class="contact-cta__actions">
+        <a class="button button--primary" href="/contact">
+          <span>Start a conversation</span>
+          <ArrowIcon class="button__icon" />
+        </a>
+        <a class="email-link" href={contactEmailHref}>{site.contact.email}</a>
+      </div>
+      {site.contact.emailIsPlaceholder && <p class="contact-cta__note">Public contact details are being confirmed before launch.</p>}
+    </div>
+    <svg class="contact-cta__tail" viewBox="0 0 520 300" fill="none" aria-hidden="true">
+      <path d="M5 246h205c85 0 103-154 168-154 43 0 50 52 14 94-34 40-1 79 48 79h75" stroke="currentColor" stroke-width="2.5" />
+    </svg>
+  </div>
+</section>
