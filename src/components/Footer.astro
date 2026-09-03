@@ -8,7 +8,10 @@ import BrandMark from './BrandMark.astro';
     <div class="footer-brand">
       <a class="brand" href="/" aria-label="Clever Cat Company home">
         <BrandMark />
-        <span class="brand__name">Clever Cat <span>Company</span></span>
+        <span class="brand__copy">
+          <span class="brand__name">{site.name}</span>
+          <span class="brand__tagline">{site.tagline}</span>
+        </span>
       </a>
       <p>{site.domain}</p>
     </div>

@@ -1,0 +1,36 @@
+---
+interface Props {
+  index: string;
+}
+
+const { index } = Astro.props;
+---
+
+<svg class="capability-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  {index === '01' && (
+    <>
+      <rect x="7" y="9" width="34" height="24" rx="2" stroke="currentColor" stroke-width="1.8" />
+      <path d="M18 40h12M24 33v7m-8-14 5-5-5-5m16 0-5 5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </>
+  )}
+  {index === '02' && (
+    <>
+      <path d="m14 34 3-10L31 10l7 7-14 14-10 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+      <path d="m27 14 7 7M10 39h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+      <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
+    </>
+  )}
+  {index === '03' && (
+    <>
+      <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="1.8" />
+      <circle cx="24" cy="24" r="2.5" fill="currentColor" />
+      <path d="M24 5v7m0 24v7M5 24h7m24 0h7m-32.4-13.4 5 5m17 17 5 5m0-27.2-5 5m-17 17-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    </>
+  )}
+  {index === '04' && (
+    <>
+      <circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="1.8" />
+      <path d="m24 9 6 9-6 6-6-6 6-9Zm0 15 6 6-6 9-6-9 6-6Zm-6-6-9 6 9 6 6-6-6-6Zm12 0 9 6-9 6-6-6 6-6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    </>
+  )}
+</svg>

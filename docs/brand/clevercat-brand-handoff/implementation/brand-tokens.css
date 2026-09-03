@@ -1,0 +1,33 @@
+/* Proposed starting tokens. Integrate into the existing Astro style system.
+   This is not a complete stylesheet or an installed website update.
+   No font files are included; font families below require proper loading.
+   Keep vivid blue for accents; verify text/button contrast in rendered UI. */
+:root {
+  --brand-obsidian: #050608;
+  --brand-graphite: #15191d;
+  --brand-gunmetal: #343a40;
+  --brand-steel: #9ca5ae;
+  --brand-white: #f3f6f8;
+  --brand-electric: #0077ff;
+  --brand-technical-blue: #103c67;
+  --brand-art-background: #000000;
+
+  --brand-bg: var(--brand-obsidian);
+  --brand-surface: var(--brand-graphite);
+  --brand-text: var(--brand-white);
+  --brand-text-muted: #b9c2cb;
+  --brand-link: #66b7ff;
+  --brand-action-bg: #005bc8;
+  --brand-action-text: #ffffff;
+  --brand-focus: #8bcaff;
+  --brand-border: #414b56;
+
+  --brand-font-heading: "Space Grotesk", "Segoe UI", sans-serif;
+  --brand-font-body: "Inter", "Segoe UI", sans-serif;
+  --brand-font-label: "Barlow Condensed", "Segoe UI", sans-serif;
+  --brand-radius: 0.375rem;
+  --brand-content-max: 84rem;
+  --brand-gutter: clamp(1.25rem, 4vw, 4rem);
+  --brand-section-space: clamp(3.5rem, 7vw, 7rem);
+  --brand-transition: 160ms ease-out;
+}

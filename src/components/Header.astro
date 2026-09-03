@@ -9,7 +9,10 @@ const currentPath = Astro.url.pathname;
   <div class="site-header__inner shell">
     <a class="brand" href="/" aria-label="Clever Cat Company home">
       <BrandMark />
-      <span class="brand__name">Clever Cat <span>Company</span></span>
+      <span class="brand__copy">
+        <span class="brand__name">{site.name}</span>
+        <span class="brand__tagline">{site.tagline}</span>
+      </span>
     </a>
 
     <nav class="desktop-nav" aria-label="Primary navigation">
@@ -17,6 +20,8 @@ const currentPath = Astro.url.pathname;
         <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>
       ))}
     </nav>
+
+    <a class="header-contact" href="/contact">Start a conversation</a>
 
     <details class="mobile-menu">
       <summary aria-label="Open navigation menu">

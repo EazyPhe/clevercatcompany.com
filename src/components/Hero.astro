@@ -1,9 +1,11 @@
 ---
 import ArrowIcon from './ArrowIcon.astro';
+import { site } from '../data/site';
 ---
 
 <section class="hero shell">
   <div class="hero__copy">
+    <p class="hero__discipline">Digital <span aria-hidden="true">•</span> Design <span aria-hidden="true">•</span> Engineering <span aria-hidden="true">•</span> Creative</p>
     <h1>Clever solutions.<br />Real results.</h1>
     <p>We turn ideas into practical digital, design, engineering, and creative outcomes.</p>
     <div class="hero__actions">
@@ -16,9 +18,18 @@ import ArrowIcon from './ArrowIcon.astro';
         <ArrowIcon class="text-link__icon" />
       </a>
     </div>
+    <p class="hero__signature"><span aria-hidden="true"></span>{site.tagline}<span aria-hidden="true"></span></p>
   </div>
   <div class="hero__media" aria-hidden="true">
-    <div class="hero__halo"></div>
-    <img src="/images/hero-sculpture.png" alt="" width="1536" height="1024" fetchpriority="high" />
+    <div class="hero__grid"></div>
+    <img
+      src="/images/brand/lion-hero-1254.webp"
+      srcset="/images/brand/lion-hero-480.webp 480w, /images/brand/lion-hero-768.webp 768w, /images/brand/lion-hero-1254.webp 1254w"
+      sizes="(max-width: 620px) calc(100vw - 40px), (max-width: 840px) 44vw, 48vw"
+      alt=""
+      width="1254"
+      height="1254"
+      fetchpriority="high"
+    />
   </div>
 </section>

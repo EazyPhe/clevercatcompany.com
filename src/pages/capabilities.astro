@@ -1,5 +1,6 @@
 ---
 import ContactCta from '../components/ContactCta.astro';
+import CapabilityIcon from '../components/CapabilityIcon.astro';
 import PageHero from '../components/PageHero.astro';
 import { site } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -21,7 +22,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li>
             <span class="capability-detail__index">{capability.index}</span>
             <article>
-              <h2>{capability.title}</h2>
+              <div class="capability-detail__title-row">
+                <CapabilityIcon index={capability.index} />
+                <h2>{capability.title}</h2>
+              </div>
               <p>{capability.description}</p>
               <ul>
                 {capability.details.map((detail) => <li>{detail}</li>)}

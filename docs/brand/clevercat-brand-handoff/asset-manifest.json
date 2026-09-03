@@ -1,0 +1,97 @@
+{
+  "created_on": "2026-09-03",
+  "status": "Implementation input; not a deployed website or completed vector-logo suite",
+  "assets": [
+    {
+      "path": "reference/brand-system.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2060747,
+      "sha256": "3e27ba08021a576ebb405eda9c0b0f90cbe1587827b18a69b81f2162e64c259f"
+    },
+    {
+      "path": "reference/homepage-direction.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1960548,
+      "sha256": "a494aa7812e172de2e788a71c4218671374e4ba497e94f198e2f5de5045738bb"
+    },
+    {
+      "path": "source-art/lion-hero-original.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2746291,
+      "sha256": "56f95bce355e6dbf7c709d00ebe8a3b52b0dbae1fa70610aad4ae3eb07c850b6"
+    },
+    {
+      "path": "source-art/lion-mark-original.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1820816,
+      "sha256": "edace78ea46ad93df93a5252832a9967d89e66a447cf6818f1880aeac2593f59"
+    },
+    {
+      "path": "web-assets/apple-touch-icon.png",
+      "width": 180,
+      "height": 180,
+      "bytes": 37053,
+      "sha256": "fae8ba423446ab1340543ced630e7adf07a62b18ea172a7b31cafe0ca3894d37"
+    },
+    {
+      "path": "web-assets/favicon-32.png",
+      "width": 32,
+      "height": 32,
+      "bytes": 1954,
+      "sha256": "fc062e2373d258e49a6bd5ea635df937d4ea89dcf7f299fe81f4ec6ed220e2c0"
+    },
+    {
+      "path": "web-assets/favicon-64.png",
+      "width": 64,
+      "height": 64,
+      "bytes": 6248,
+      "sha256": "4cb4ba113de962cc5b3aaaf4b20b4e3511a5909546d07c010ef41a79dd07fe1e"
+    },
+    {
+      "path": "web-assets/favicon.ico",
+      "width": 64,
+      "height": 64,
+      "bytes": 12937,
+      "sha256": "a8a635c56fc471187a9c010027870ef0391f4d34f396d1d9b272d9bd9ca714cf"
+    },
+    {
+      "path": "web-assets/lion-hero-1254.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 290744,
+      "sha256": "1e9cde6a4464357dbd5a32fb09064ef4a69f5363828e051a98c483a3d05d944e"
+    },
+    {
+      "path": "web-assets/lion-hero-480.webp",
+      "width": 480,
+      "height": 480,
+      "bytes": 51952,
+      "sha256": "5849a1f54ff1694f4ae09cb233ae73dc766488b70aa187501e5b6e317235564c"
+    },
+    {
+      "path": "web-assets/lion-hero-768.webp",
+      "width": 768,
+      "height": 768,
+      "bytes": 121838,
+      "sha256": "b555a4d35e2547de2be124232e7b7b2d0a798a0853e2052474ea910af5a12a1d"
+    },
+    {
+      "path": "web-assets/lion-mark-192.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 10832,
+      "sha256": "8e0e657da9d5a99a88e77187253e92d28e35dd03c981cd4a6110841727048abb"
+    },
+    {
+      "path": "web-assets/lion-mark-384.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 30634,
+      "sha256": "b3be2380c6ecdf3b07fa34f0422eba3d63d6dcbabfb1b62493809f51184b5d81"
+    }
+  ]
+}

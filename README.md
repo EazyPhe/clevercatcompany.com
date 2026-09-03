@@ -29,7 +29,9 @@ npm run preview
 
 Edit `src/data/site.ts` for the company description, navigation labels, contact details, capability copy, process steps, project slots, and their image metadata. The public email is intentionally a build placeholder; replace it with a monitored inbox before launch.
 
-See [docs/CONTENT_NEEDED.md](docs/CONTENT_NEEDED.md) for the prioritized owner checklist. The current generated cat sculpture and material studies are original local assets in `public/images/`; obtain final owner approval before production publishing.
+See [docs/CONTENT_NEEDED.md](docs/CONTENT_NEEDED.md) for the prioritized owner checklist. The approved mechanical-lion handoff, source artwork, and visual references are retained in `docs/brand/clevercat-brand-handoff/`; only the WebP/icon assets used by the site live in `public/images/brand/`. The legacy abstract material studies remain clearly paired with unconfirmed case-study slots.
+
+The rebrand loads locally bundled Space Grotesk and Inter variable fonts through the two deliberate `@fontsource-variable/*` dependencies. This avoids declaring unavailable fonts or depending on a remote font host.
 
 ## Structure
 
@@ -39,7 +41,7 @@ See [docs/CONTENT_NEEDED.md](docs/CONTENT_NEEDED.md) for the prioritized owner c
 - `src/styles/global.css` — design tokens, responsive layout, focus states, and reduced-motion behavior.
 - `public/` — local assets, favicon, `robots.txt`, and the custom-domain `CNAME` file.
 - `.github/workflows/deploy-pages.yml` — prepared GitHub Pages Actions workflow.
-- `docs/review/` — accepted Image Gen concepts, visual-review screenshots, and fidelity notes.
+- `docs/review/` — visual-review screenshots and fidelity notes; the current mechanical-lion evidence is in `docs/review/mechanical-lion/`.
 
 ## GitHub Pages preparation and custom domain
 

@@ -4,6 +4,7 @@ export const site = {
   url: 'https://clevercatcompany.com',
   description:
     'A multidisciplinary studio for practical digital, design, engineering, and creative outcomes.',
+  tagline: 'Engineered to Lead',
   contact: {
     // Build placeholder only. Replace before launch with a monitored public inbox.
     email: 'hello@clevercatcompany.com',

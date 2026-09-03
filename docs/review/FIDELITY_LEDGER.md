@@ -1,4 +1,9 @@
-# Fidelity ledger
+# Fidelity ledger — previous visual direction (superseded)
+
+This document records the original purple-site review only. The active
+mechanical-lion rebrand is reviewed in
+[`mechanical-lion/FIDELITY_LEDGER.md`](mechanical-lion/FIDELITY_LEDGER.md), and
+its design system is documented in [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md).
 
 The accepted concept set is stored in `docs/review/concepts/` and was generated as an original design reference for this implementation:
 

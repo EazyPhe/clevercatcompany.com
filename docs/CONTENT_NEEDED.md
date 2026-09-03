@@ -6,7 +6,7 @@ The first site build intentionally avoids presenting unverified business facts. 
 
 1. **Public contact email:** Replace the current `hello@clevercatcompany.com` build placeholder in `src/data/site.ts` with the monitored public inbox.
 2. **Final company positioning and service language:** Confirm which capability areas should remain, be renamed, or be removed.
-3. **Permission for the generated original mark and imagery:** Confirm whether the included original cat-inspired mark and generated material imagery are approved for production use.
+3. **Final logo system:** The supplied mechanical-lion raster artwork is the approved interim website lockup, but it is not an editable vector logo or standalone wordmark. Provide a finalized vector/logo suite only if a future replacement is desired. The supplied favicon remains intentionally detailed at 16 px; no substitute mark has been invented.
 4. **Privacy language:** Replace the privacy placeholder before collecting contact information, analytics, or any other personal data.
 
 ## Next priority
