@@ -1,12 +1,13 @@
 ---
+import ArrowIcon from '../components/ArrowIcon.astro';
 import ContactCta from '../components/ContactCta.astro';
 import PageHero from '../components/PageHero.astro';
 import ProcessRail from '../components/ProcessRail.astro';
 import { site } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="About" description="The mission and working principles behind Clever Cat Company: focus, integrity, and follow-through.">
-  <PageHero title="Built with intention." intro="Clever Cat Company brings an independent body of creative and technical work into one clear home." />
+<BaseLayout title="About" description={site.aboutIntro}>
+  <PageHero title="Built with intention." intro={site.aboutIntro} />
   <section class="about-story">
     <div class="shell about-story__grid">
       <div class="about-story__lead"><p>Good work earns trust. Consistent work makes it last.</p></div>
@@ -18,6 +19,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+  <section class="about-connection shell" id="our-businesses" aria-labelledby="businesses-heading">
+    <div class="section-heading"><h2 id="businesses-heading">Our businesses.</h2></div>
+    <div class="about-connection__body">
+      <h3>{site.business.name}</h3>
+      <p>{site.business.description}</p>
+      <div class="about-connection__links">
+        <a class="text-link" href={site.business.url}>Visit {site.business.name}<ArrowIcon class="text-link__icon" /></a>
+        <a class="text-link" href={site.business.bookingUrl}>Booking inquiries<ArrowIcon class="text-link__icon" /></a>
+      </div>
+    </div>
+  </section>
+  <section class="about-connection shell" aria-labelledby="founder-heading">
+    <div class="section-heading"><h2 id="founder-heading">Meet the founder.</h2></div>
+    <div class="about-connection__body">
+      <h3>{site.founder.name}</h3>
+      <p>{site.founder.description}</p>
+      <div class="about-connection__links">
+        <a class="text-link" href={site.founder.url}>Visit his personal website<ArrowIcon class="text-link__icon" /></a>
+      </div>
+    </div>
+  </section>
   <section class="principles shell" aria-labelledby="principles-heading">
     <div class="section-heading"><h2 id="principles-heading">The standard we work to.</h2></div>
     <div class="principles__grid">{site.principles.map((principle) => <article><h3>{principle.title}</h3><p>{principle.text}</p></article>)}</div>
@@ -25,3 +47,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <ProcessRail />
   <ContactCta />
 </BaseLayout>
+
+<style>
+  .about-connection {
+    display: grid;
+    grid-template-columns: minmax(0, 0.98fr) minmax(0, 0.88fr);
+    gap: clamp(48px, 12vw, 220px);
+    padding-block: var(--small-space);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .about-connection h2 {
+    max-width: 12ch;
+    font-size: clamp(36px, 4vw, 60px);
+  }
+
+  .about-connection__body {
+    max-width: 50ch;
+  }
+
+  .about-connection h3 {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+  }
+
+  .about-connection__body p {
+    margin-top: 16px;
+    color: var(--muted-strong);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .about-connection__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 28px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 840px) {
+    .about-connection {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+</style>

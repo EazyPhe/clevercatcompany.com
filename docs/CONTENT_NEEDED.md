@@ -21,7 +21,16 @@ Updated October 20, 2026.
 5. A dedicated company-domain inbox if one is created and verified. Keep the existing email destination until then.
 6. Public release or source links when a project is ready for them. Private repositories remain private.
 7. Any additional public social/contact details the owner chooses to publish.
-8. A relationship statement for other brands only if explicitly approved.
+8. Any further business relationship statements the owner explicitly approves.
+
+## Approved business and founder links
+
+On October 20, 2026, the owner approved publishing an "Our businesses" area for DJ Phelix and a "Meet the founder" section linking Phelix Estinvil's personal website. Clever Cat Company is described as the umbrella for his businesses and projects; no incorporation or legal holding-company structure is claimed.
+
+- DJ Phelix keeps its distinct name and website at https://djphelix.com.
+- Booking inquiries remain on DJ Phelix's existing https://djphelix.com/contact/ page.
+- Phelix Estinvil's personal website is https://phelixestinvil.com.
+- All three HTTPS destinations returned HTTP 200 with no redirects when checked for this update.
 
 Edit the centralized public records in src/data/site.ts, then run npm run check and npm run build. Update the privacy notice before introducing analytics, forms, account features, or other data collection.
 

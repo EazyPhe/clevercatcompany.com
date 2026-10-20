@@ -11,6 +11,7 @@ import BrandMark from './BrandMark.astro';
         <span class="brand__name">Clever Cat <span>Company</span></span>
       </a>
       <p>{site.domain}</p>
+      <p class="footer-business">Our businesses: <a href={site.business.url}>{site.business.name}</a></p>
     </div>
 
     <nav class="footer-nav" aria-label="Footer navigation">
@@ -23,3 +24,16 @@ import BrandMark from './BrandMark.astro';
     </div>
   </div>
 </footer>
+
+<style>
+  .footer-business a {
+    color: var(--paper);
+    text-decoration: underline;
+    text-decoration-color: var(--purple);
+    text-underline-offset: 4px;
+  }
+
+  .footer-business a:hover {
+    color: var(--purple-bright);
+  }
+</style>

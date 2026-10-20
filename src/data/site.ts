@@ -95,6 +95,18 @@ export const site = {
   url: 'https://clevercatcompany.com',
   description: 'The project portfolio of Clever Cat Company: focused software, connected systems, and practical prototyping.',
   mission: 'Clever Cat Company turns focused creativity and practical skill into useful software, connected systems, and physical products. We build with integrity, follow through on our commitments, and create work that earns trust, strengthens connection, and delivers lasting value.',
+  aboutIntro: "Clever Cat Company is the umbrella for Phelix Estinvil's businesses and projects, bringing creative and technical work into one clear home.",
+  business: {
+    name: 'DJ Phelix',
+    url: 'https://djphelix.com',
+    description: 'Explore DJ Phelix and start a booking inquiry on its dedicated website.',
+    bookingUrl: 'https://djphelix.com/contact/',
+  },
+  founder: {
+    name: 'Phelix Estinvil',
+    url: 'https://phelixestinvil.com',
+    description: 'Get to know Phelix Estinvil and explore his background and projects on his personal website.',
+  },
   contact: {
     // Existing public professional contact, also published on the owner's public contact card.
     email: 'estinvilp3@gmail.com',
