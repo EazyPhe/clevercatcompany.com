@@ -7,18 +7,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Capabilities"
-  description="Explore the working capability areas of Clever Cat Company: digital, visual, engineering, and creative work."
+  description="Software and workflow, connected devices and control, and product design and fabrication at Clever Cat Company."
 >
   <PageHero
     title="Capabilities"
-    intro="A working set of connected capabilities, ready to adapt to the shape of a real problem."
+    intro="Three connected disciplines for turning practical problems into clear, tangible work."
   />
 
   <section class="capability-detail">
     <div class="shell">
       <ol>
         {site.capabilities.map((capability) => (
-          <li>
+          <li id={capability.id}>
             <span class="capability-detail__index">{capability.index}</span>
             <article>
               <h2>{capability.title}</h2>

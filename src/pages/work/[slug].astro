@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { projects, type Project } from '../../data/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectVisual from '../../components/ProjectVisual.astro';
+import ArrowIcon from '../../components/ArrowIcon.astro';
+
+export const getStaticPaths = (() => projects.map((project) => ({
+  params: { slug: project.slug },
+  props: { project },
+}))) satisfies GetStaticPaths;
+
+interface Props { project: Project; }
+const { project } = Astro.props;
+const related = projects.filter((item) => item.slug !== project.slug);
+---
+<BaseLayout title={project.name} description={project.summary}>
+  <header class="project-hero shell">
+    <div>
+      <a class="project-back" href="/work/"><span aria-hidden="true">←</span> All projects</a>
+      <p class="eyebrow">{project.categoryLabel}</p>
+      <h1>{project.name}</h1>
+      <p class="project-hero__intro">{project.intro}</p>
+      <span class="project-status">{project.status}</span>
+    </div>
+    <ProjectVisual kind={project.visual} />
+  </header>
+  <div class="shell project-details">
+    <aside class="project-facts" aria-label="Project facts">
+      <dl>
+        <div><dt>Scope</dt><dd>{project.scope}</dd></div>
+        <div><dt>Technology</dt><dd>{project.technologies.join(' · ')}</dd></div>
+        <div><dt>Portfolio updated</dt><dd><time datetime="2026-10-20">October 2026</time></dd></div>
+      </dl>
+    </aside>
+    <div class="project-story">
+      <section><p class="eyebrow">01 / The problem</p><h2>What needed to change.</h2><p>{project.challenge}</p></section>
+      <section><p class="eyebrow">02 / The approach</p><h2>A focused way forward.</h2><p>{project.approach}</p></section>
+      <section><p class="eyebrow">03 / The work</p><h2>What has been built.</h2><ul>{project.delivered.map((item) => <li>{item}</li>)}</ul></section>
+      <section><p class="eyebrow">04 / Current state</p><h2>Where it stands.</h2><p>{project.outcome}</p>{project.note && <p class="project-note">{project.note}</p>}</section>
+      <section><p class="eyebrow">05 / Next</p><h2>The next useful step.</h2><p>{project.next}</p></section>
+      <a class="button button--primary" href="/contact/">Talk about a similar problem <ArrowIcon class="button__icon" /></a>
+    </div>
+  </div>
+  <section class="related-projects shell" aria-labelledby="related-heading">
+    <h2 id="related-heading">Continue exploring.</h2>
+    <div>{related.map((item) => <a href={'/work/' + item.slug + '/'}><span>{item.name}</span><ArrowIcon class="text-link__icon" /></a>)}</div>
+  </section>
+</BaseLayout>

@@ -45,3 +45,24 @@ The production build was served locally on port `4321` and reviewed through the 
 - Static-output link check: 6 HTML pages, 127 local route/asset references checked, 0 failures.
 
 No material visual mismatch remains after the hero-line-break correction. The implementation was faithfully reviewed against the accepted concept set and is ready for owner review, subject to the content and privacy inputs documented in `../CONTENT_NEEDED.md`.
+
+
+## Portfolio release — October 20, 2026
+
+The original comparisons above document the scaffold and are retained as history. This release deliberately evolves its content into a usable project portfolio while preserving the graphite/purple palette, original cat mark, sculpture, editorial layouts, native menu, focus styling, and reduced-motion behavior.
+
+Intentional changes:
+- A short hero eyebrow, revised supporting copy, and a primary Explore the work action.
+- Selected projects immediately after the hero, followed by the public mission and three practice areas.
+- Three substantial project pages, accurate maturity labels, and labeled workflow illustrations replacing the unlinked placeholder cards.
+- Progressive category filtering and related-project navigation.
+- An existing public professional email, factual static-site privacy text, and a custom 404 page.
+- Graphite text on purple buttons for improved contrast; active navigation includes nested project routes.
+
+Fresh review used the connected Chrome Browser and the production build served from Inspiron. Home layouts were inspected at 1440 × 960, 768 × 1024, and 375 × 812. Measured document width stayed within each viewport. Project route titles and content, related-project links, the mobile menu using Enter, and the contact destination were checked.
+
+The filter interaction produced 3 projects for All, 2 for Software & Workflow, and 1 for Connected Devices & Control. The selected category survived reload. The custom 404 rendered the recovery links and returned to the project collection. Normal page checks showed no relevant browser warnings, runtime errors, blank screens, or framework overlays. A deliberately requested missing URL returns the expected 404.
+
+Validation: npm run check completed with 0 errors, 0 warnings, and 0 hints; npm run build generated 10 HTML pages. The final static-output check verified 240 internal route/asset/anchor references with 0 failures. A 404 canonical-path mismatch found during that check was corrected before release.
+
+GitHub Pages deployment now runs on changes to main and remains manually dispatchable. Publishing the portfolio does not publish the source or data of the private projects described by it.

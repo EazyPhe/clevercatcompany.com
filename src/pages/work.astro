@@ -3,14 +3,7 @@ import PageHero from '../components/PageHero.astro';
 import WorkGrid from '../components/WorkGrid.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout
-  title="Selected work"
-  description="A deliberately honest space for future Clever Cat Company project stories."
->
-  <PageHero
-    title="Selected work"
-    intro="This is a home for real project stories—not a substitute for them. Case studies will be added as their facts, assets, and permissions are ready."
-  />
-  <WorkGrid compact />
+<BaseLayout title="Selected work" description="Explore ManeSlice, Connected Show Control, and Project Command Center: the project portfolio of Clever Cat Company.">
+  <PageHero title="Selected work" intro="One company. A focused body of work. Explore software, connected systems, and the practical thinking behind each project." />
+  <WorkGrid compact filterable />
 </BaseLayout>

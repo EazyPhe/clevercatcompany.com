@@ -2,7 +2,11 @@
 import { site } from '../data/site';
 import BrandMark from './BrandMark.astro';
 
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const currentState = (href: string) => {
+  const path = href.replace(/\/$/, '') || '/';
+  return currentPath === path ? 'page' : currentPath.startsWith(path + '/') ? 'true' : undefined;
+};
 ---
 
 <header class="site-header">
@@ -14,20 +18,20 @@ const currentPath = Astro.url.pathname;
 
     <nav class="desktop-nav" aria-label="Primary navigation">
       {site.navigation.map((item) => (
-        <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>
+        <a href={item.href} aria-current={currentState(item.href)}>{item.label}</a>
       ))}
     </nav>
 
     <details class="mobile-menu">
-      <summary aria-label="Open navigation menu">
+      <summary aria-label="Navigation menu">
         <span class="mobile-menu__icon" aria-hidden="true"><i></i><i></i></span>
         <span>Menu</span>
       </summary>
       <nav aria-label="Mobile navigation">
         {site.navigation.map((item) => (
-          <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>
+          <a href={item.href} aria-current={currentState(item.href)}>{item.label}</a>
         ))}
-        <a class="mobile-menu__cta" href="/contact">Start a conversation</a>
+        <a class="mobile-menu__cta" href="/contact/">Start a conversation</a>
       </nav>
     </details>
   </div>

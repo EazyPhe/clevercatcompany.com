@@ -1,0 +1,51 @@
+---
+interface Props { kind: 'print' | 'control' | 'workflow'; }
+const { kind } = Astro.props;
+---
+<div class:list={['project-visual', 'project-visual--' + kind]} aria-hidden="true">
+  <svg viewBox="0 0 600 360" fill="none">
+    <path class="visual-grid" d="M0 60h600M0 120h600M0 180h600M0 240h600M0 300h600M60 0v360M120 0v360M180 0v360M240 0v360M300 0v360M360 0v360M420 0v360M480 0v360M540 0v360" />
+    {kind === 'print' && (
+      <g>
+        <path class="visual-frame" d="M150 80h300v200H150zM180 260l120-70 120 70-120 70z" />
+        <path class="visual-accent" d="m215 227 85-49 85 49-85 49-85-49Zm0-18 85-49 85 49-85 49-85-49Zm0-18 85-49 85 49-85 49-85-49Zm0-18 85-49 85 49-85 49-85-49Z" />
+        <path class="visual-frame" d="M300 50v62m-15-62h30l-6 45h-18l-6-45Z" />
+        <circle class="visual-dot" cx="300" cy="112" r="5" />
+        <path class="visual-frame" d="M90 303h80m260 0h80M90 315h40m340 0h40" />
+      </g>
+    )}
+    {kind === 'control' && (
+      <g>
+        <rect class="visual-frame" x="68" y="90" width="122" height="180" rx="12" />
+        <path class="visual-frame" d="M88 120h82M88 145h54M88 170h82M88 195h54" />
+        <circle class="visual-dot" cx="129" cy="241" r="5" />
+        <path class="visual-accent" d="M190 180h67m86 0h61m-61 0v-72h61m-61 72v72h61" />
+        <rect class="visual-frame" x="257" y="142" width="86" height="76" rx="8" />
+        <circle class="visual-accent" cx="300" cy="180" r="19" />
+        <rect class="visual-frame" x="404" y="79" width="112" height="58" rx="6" />
+        <rect class="visual-frame" x="404" y="151" width="112" height="58" rx="6" />
+        <rect class="visual-frame" x="404" y="223" width="112" height="58" rx="6" />
+        <circle class="visual-dot" cx="428" cy="108" r="5" />
+        <circle class="visual-dot" cx="428" cy="180" r="5" />
+        <circle class="visual-dot" cx="428" cy="252" r="5" />
+        <path class="visual-frame" d="M446 108h48m-48 72h48m-48 72h48" />
+      </g>
+    )}
+    {kind === 'workflow' && (
+      <g>
+        <rect class="visual-frame" x="78" y="68" width="444" height="224" rx="9" />
+        <path class="visual-frame" d="M78 104h444M194 104v188M215 139h104m-104 18h66" />
+        <circle class="visual-dot" cx="100" cy="86" r="3" />
+        <circle class="visual-dot" cx="113" cy="86" r="3" />
+        <circle class="visual-dot" cx="126" cy="86" r="3" />
+        <path class="visual-frame" d="M100 132h69M100 160h54M100 188h60M100 216h48" />
+        <rect class="visual-accent" x="215" y="179" width="80" height="88" rx="4" />
+        <rect class="visual-frame" x="312" y="179" width="80" height="88" rx="4" />
+        <rect class="visual-frame" x="409" y="179" width="90" height="88" rx="4" />
+        <path class="visual-accent" d="m235 220 13 13 26-31M329 220h45m62 0h45" />
+        <path class="visual-frame" d="M234 251h40m57 0h40m64 0h45" />
+      </g>
+    )}
+  </svg>
+  <span class="project-visual__label">Workflow illustration</span>
+</div>

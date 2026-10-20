@@ -1,23 +1,28 @@
-# Content needed before launch
+# Portfolio content follow-ups
 
-The first site build intentionally avoids presenting unverified business facts. Please provide or confirm these items before publishing.
+Updated October 20, 2026.
 
-## Highest priority
+## Included in this release
 
-1. **Public contact email:** Replace the current `hello@clevercatcompany.com` build placeholder in `src/data/site.ts` with the monitored public inbox.
-2. **Final company positioning and service language:** Confirm which capability areas should remain, be renamed, or be removed.
-3. **Permission for the generated original mark and imagery:** Confirm whether the included original cat-inspired mark and generated material imagery are approved for production use.
-4. **Privacy language:** Replace the privacy placeholder before collecting contact information, analytics, or any other personal data.
+- The concise public mission and three connected disciplines.
+- ManeSlice: a working dashboard prototype, with the wider project still in development.
+- Connected Show Control: simulation, show editing, and device observation; no completed live Android-to-DMX claim.
+- Project Command Center: a working internal project inventory and context tool.
+- An existing public professional email destination and a factual notice for the current static site.
+- The existing graphite/purple identity and original cat mark.
+- Labeled workflow illustrations, rather than unverified product photographs.
 
-## Next priority
+## Next useful additions
 
-5. **Real project case studies:** Supply project names, approved descriptions, outcomes that can be substantiated, asset permissions, and any desired links. The current three work slots are deliberately neutral placeholders.
-6. **Approved public contact details:** Optional public phone number, mailing/business address if one is intended for publication, and social-profile URLs.
-7. **Relationship statement:** Confirm whether Clever Cat Company has any public relationship to any other brand. None is claimed in this build.
+1. Approved screenshots or short demonstrations for each project, with private data removed.
+2. A physical design or fabrication case with actual CAD, prototype photographs, or measurements and a clear status.
+3. A separate Wi-Fi hub case once its scope, current behavior, and approved evidence are assembled.
+4. Stronger outcome evidence: describe what was tested and observed, with dates and context. Do not substitute feature requests for completed work.
+5. A dedicated company-domain inbox if one is created and verified. Keep the existing email destination until then.
+6. Public release or source links when a project is ready for them. Private repositories remain private.
+7. Any additional public social/contact details the owner chooses to publish.
+8. A relationship statement for other brands only if explicitly approved.
 
-## Optional future additions
+Edit the centralized public records in src/data/site.ts, then run npm run check and npm run build. Update the privacy notice before introducing analytics, forms, account features, or other data collection.
 
-8. Approved photography or additional original art direction.
-9. Confirmed legal/business details for a fuller privacy notice, terms, accessibility statement, or analytics policy.
-
-Do not add any unknown fact directly to rendered copy. Update the centralized values in `src/data/site.ts` first, then run `npm run check` and `npm run build`.
+This file supersedes the launch-placeholder checklist from the initial site scaffold. Historical design concepts and review evidence remain in docs/review/.

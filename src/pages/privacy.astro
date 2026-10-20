@@ -1,33 +1,21 @@
 ---
 import PageHero from '../components/PageHero.astro';
+import { contactEmailHref, site } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout
-  title="Privacy"
-  description="Privacy placeholder for Clever Cat Company."
->
-  <PageHero
-    title="Privacy"
-    intro="A short, honest placeholder to be completed before this website collects personal data."
-  />
-
+<BaseLayout title="Privacy" description="How this portfolio handles website visits and contact by email.">
+  <PageHero title="Privacy" intro="A straightforward explanation of how this portfolio works and what happens when you get in touch." />
   <section class="legal-copy">
     <div class="shell legal-copy__inner">
-      <h2>Privacy notice placeholder</h2>
-      <p>
-        This initial static site does not include a contact-form endpoint, analytics integration, or customer account
-        system. It should not be treated as a complete privacy notice.
-      </p>
-      <p>
-        Before the site collects messages, analytics data, or any other personal information, Clever Cat Company must
-        publish an updated privacy notice that explains what is collected, why it is collected, how long it is kept,
-        and how visitors can make privacy requests.
-      </p>
-      <p>
-        The owner should review and replace this placeholder with appropriate legal language for the actual services
-        and tools in use before launch.
-      </p>
+      <p class="eyebrow">Updated October 20, 2026</p>
+      <h2>Visiting the website</h2>
+      <p>This is a public project portfolio hosted on GitHub Pages. The website does not include analytics or advertising trackers, visitor accounts, a newsletter signup, or a contact form. Its own code does not set cookies or store visitor information in your browser.</p>
+      <p>GitHub processes information needed to host and secure the website. GitHub states that visitors' IP addresses are logged and stored for security purposes. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a> for details.</p>
+      <h2>Contact by email</h2>
+      <p>Email links open your chosen email application. A message is sent only when you send it from that application. Your email address and any information you choose to include are then processed by the email services involved and received for the purpose of your conversation.</p>
+      <h2>Links and questions</h2>
+      <p>External websites have their own privacy practices. For a question about this portfolio or information you have shared by email, contact <a href={contactEmailHref}>{site.contact.email}</a>.</p>
+      <p>This notice will be updated if the website's features or data practices change.</p>
     </div>
   </section>
 </BaseLayout>

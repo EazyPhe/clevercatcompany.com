@@ -1,31 +1,77 @@
 ---
-import { site } from '../data/site';
+import { projects } from '../data/site';
+import ProjectVisual from './ProjectVisual.astro';
+import ArrowIcon from './ArrowIcon.astro';
 
-interface Props {
-  compact?: boolean;
-}
-
-const { compact = false } = Astro.props;
+interface Props { compact?: boolean; filterable?: boolean; }
+const { compact = false, filterable = false } = Astro.props;
 ---
-
-<section class:list={['work-section', { 'work-section--compact': compact }]} id={compact ? undefined : 'work'}>
+<section class:list={['work-section', { 'work-section--compact': compact }]} id="projects" data-project-browser>
   <div class="shell">
     <div class="section-heading section-heading--split">
-      <div>
-        <h2>Selected work</h2>
-      </div>
-      <p>Real project stories will be added as they are ready to share.</p>
+      <div><h2>{filterable ? 'Explore the projects' : 'Selected work'}</h2></div>
+      <p>Focused projects, connected by practical problem solving. Each story shows the work and where it stands.</p>
     </div>
-    <div class="work-grid">
-      {site.workSlots.map((slot) => (
-        <article class="work-slot">
-          <img src={slot.image} alt={slot.alt} width="1536" height="1024" loading="lazy" />
-          <div class="work-slot__copy">
-            <h3>{slot.title}</h3>
-            <p>{slot.description}</p>
-          </div>
+    {filterable && (
+      <div class="project-filter-bar" data-project-filters hidden>
+        <div class="project-filters" role="group" aria-label="Filter projects by discipline">
+          <button type="button" data-filter="all" aria-pressed="true" aria-controls="project-grid">All projects</button>
+          <button type="button" data-filter="software" aria-pressed="false" aria-controls="project-grid">Software &amp; Workflow</button>
+          <button type="button" data-filter="connected" aria-pressed="false" aria-controls="project-grid">Connected Devices &amp; Control</button>
+        </div>
+        <p class="project-count" role="status" aria-live="polite" data-project-count>{projects.length} projects</p>
+      </div>
+    )}
+    <div class="work-grid" id="project-grid">
+      {projects.map((project) => (
+        <article class="work-slot" data-project-category={project.category}>
+          <a class="project-card" href={'/work/' + project.slug + '/'} aria-label={'Explore ' + project.name}>
+            <ProjectVisual kind={project.visual} />
+            <div class="work-slot__copy">
+              <div class="project-card__meta"><span>{project.categoryLabel}</span><span class="project-status">{project.status}</span></div>
+              <h3>{project.name}<ArrowIcon class="project-card__arrow" /></h3>
+              <p>{project.summary}</p>
+              <span class="project-card__link">Explore project <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
         </article>
       ))}
     </div>
+    {!filterable && <a class="text-link work-section__more" href="/work/">Browse the portfolio <ArrowIcon class="text-link__icon" /></a>}
+    {filterable && (
+      <p class="portfolio-context">The studio also explores <a href="/capabilities/#product-design">product design and fabrication</a>. This collection grows as individual projects are ready to share.</p>
+    )}
   </div>
 </section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-project-browser]').forEach((browser) => {
+    const toolbar = browser.querySelector<HTMLElement>('[data-project-filters]');
+    if (!toolbar) return;
+    const buttons = Array.from(toolbar.querySelectorAll<HTMLButtonElement>('[data-filter]'));
+    const cards = Array.from(browser.querySelectorAll<HTMLElement>('[data-project-category]'));
+    const count = toolbar.querySelector<HTMLElement>('[data-project-count]');
+    const applyFilter = (value: string) => {
+      const valid = buttons.some((button) => button.dataset.filter === value);
+      const selected = valid ? value : 'all';
+      let visible = 0;
+      cards.forEach((card) => {
+        const match = selected === 'all' || card.dataset.projectCategory === selected;
+        card.hidden = !match;
+        if (match) visible += 1;
+      });
+      buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.filter === selected)));
+      if (count) count.textContent = visible + (visible === 1 ? ' project' : ' projects');
+    };
+    toolbar.hidden = false;
+    applyFilter(new URL(window.location.href).searchParams.get('category') || 'all');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const value = button.dataset.filter || 'all';
+      applyFilter(value);
+      const url = new URL(window.location.href);
+      if (value === 'all') url.searchParams.delete('category');
+      else url.searchParams.set('category', value);
+      window.history.replaceState(null, '', url);
+    }));
+    window.addEventListener('popstate', () => applyFilter(new URL(window.location.href).searchParams.get('category') || 'all'));
+  });
+</script>

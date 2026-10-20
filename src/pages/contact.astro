@@ -4,37 +4,19 @@ import PageHero from '../components/PageHero.astro';
 import { contactEmailHref, site } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout
-  title="Contact"
-  description="Start a conversation with Clever Cat Company."
->
-  <PageHero
-    title="Contact"
-    intro="Have an idea, an early brief, or a practical problem to talk through? Start with a straightforward note."
-  />
-
+<BaseLayout title="Contact" description="Get in touch about Clever Cat Company projects, ideas, and collaboration.">
+  <PageHero title="Let's talk." intro="Have an idea, a question about a project, or a practical problem to work through? Start with a straightforward note." />
   <section class="contact-page" id="email">
     <div class="shell contact-page__grid">
       <div>
-        <h2>Start with a note.</h2>
-        <p>
-          This static first version uses an email link rather than a form, so it never implies that a message has
-          been sent somewhere it has not.
-        </p>
+        <h2>Start with what matters.</h2>
+        <p>Tell us what you are trying to do, where things stand, and what a useful next step would look like. A little context makes a better conversation.</p>
+        <p>You can also mention a project from the portfolio that connects with your idea.</p>
       </div>
       <div class="contact-page__action">
-        <a class="button button--primary" href={contactEmailHref}>
-          <span>Email the studio</span>
-          <ArrowIcon class="button__icon" />
-        </a>
+        <a class="button button--primary" href={contactEmailHref}><span>Email Clever Cat Company</span><ArrowIcon class="button__icon" /></a>
         <a class="email-link" href={contactEmailHref}>{site.contact.email}</a>
-        {site.contact.emailIsPlaceholder && (
-          <p class="contact-page__note">
-            This address is an editable build placeholder and must be replaced with a monitored public inbox before
-            launch.
-          </p>
-        )}
+        <p class="contact-page__note">The button opens your email app. You can also copy the address into the email service you use.</p>
       </div>
     </div>
   </section>
