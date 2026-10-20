@@ -1,16 +1,16 @@
 :root {
   color-scheme: dark;
-  --ink: #0b0b0f;
-  --ink-raised: #111118;
-  --surface: #17171e;
-  --surface-soft: #202029;
-  --paper: #f7f7fa;
-  --muted: #a8a8b6;
-  --muted-strong: #c6c6d0;
+  --ink: #050608;
+  --ink-raised: #101419;
+  --surface: #15191D;
+  --surface-soft: #202830;
+  --paper: #F3F6F8;
+  --muted: #9CA5AE;
+  --muted-strong: #C9D3DD;
   --line: rgba(247, 247, 250, 0.16);
-  --purple: #a45cff;
-  --purple-bright: #bd8aff;
-  --purple-deep: #6f36c8;
+  --purple: #0077FF;
+  --purple-bright: #4CA2FF;
+  --purple-deep: #103C67;
   --font-sans: "Helvetica Neue", "Arial Nova", "Segoe UI", Arial, sans-serif;
   --font-serif: Iowan Old Style, "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --shell: min(1320px, calc(100vw - 96px));
@@ -299,7 +299,7 @@ li {
   right: -10%;
   width: 96%;
   aspect-ratio: 1;
-  background: radial-gradient(circle, rgba(164, 92, 255, 0.18), transparent 63%);
+  background: radial-gradient(circle, rgba(0, 119, 255, 0.18), transparent 63%);
   filter: blur(12px);
 }
 
@@ -484,7 +484,7 @@ li {
 
 .work-slot:hover img {
   transform: translateY(-5px);
-  border-color: rgba(164, 92, 255, 0.65);
+  border-color: rgba(0, 119, 255, 0.65);
 }
 
 .work-slot__copy {
@@ -960,7 +960,7 @@ li {
     display: grid;
     min-width: min(320px, calc(100vw - 48px));
     padding: 14px;
-    border: 1px solid rgba(164, 92, 255, 0.5);
+    border: 1px solid rgba(0, 119, 255, 0.5);
     background: #101016;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.38);
   }
@@ -1280,7 +1280,7 @@ li {
 .project-visual__label { position: absolute; bottom: 12px; left: 16px; color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .project-card:hover .project-visual, .project-card:focus-visible .project-visual { border-color: var(--purple-bright); }
 .project-card__meta { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-height: 78px; color: var(--muted); font-size: 11px; letter-spacing: .02em; }
-.project-status { display: inline-flex; align-items: center; gap: 7px; padding: 5px 9px; border: 1px solid rgba(164,92,255,.3); color: var(--purple-bright); font-size: 12px; line-height: 1.4; }
+.project-status { display: inline-flex; align-items: center; gap: 7px; padding: 5px 9px; border: 1px solid rgba(0,119,255,.3); color: var(--purple-bright); font-size: 12px; line-height: 1.4; }
 .project-status::before { width: 5px; height: 5px; background: currentColor; border-radius: 50%; content: ""; }
 .work-slot h3 { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; min-height: 2.25em; font-size: clamp(24px,2.2vw,32px); font-weight: 500; line-height: 1.1; }
 .project-card__arrow { width: 22px; height: 22px; flex-shrink: 0; margin-top: 4px; color: var(--purple-bright); }
@@ -1360,3 +1360,10 @@ li {
   .contact-page__action .button { gap: 12px; padding-inline: 12px; font-size: 14px; }
   .not-found .text-link { display: table; margin: 20px 0 0; }
 }
+
+/* Mechanical lion identity */
+.hero__media { background: #050608; }
+.hero__media img { object-fit: contain; object-position: center; }
+.hero__signature { margin-top: 30px; color: var(--purple-bright); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+.brand-mark { object-fit: contain; border-radius: 2px; }
+.button--primary { background: #0077FF; color: #050608; }
